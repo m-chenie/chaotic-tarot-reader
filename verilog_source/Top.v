@@ -82,7 +82,7 @@ UART_RX rx_inst (
 );
 
 // Average Calculator
-fingerprint_mean_processing avg_inst (
+Processing avg_inst (
     sysclk,
     clk2Mhz,
     rst_n,
@@ -111,10 +111,17 @@ always @(posedge sysclk) begin
  end
 
 //initialize henonmap
-
+//reg [31:0] a;
+//reg [31:0] b;
 wire Henon_done;
 wire [31:0] x_out;
 wire [31:0] y_out;
+
+//initial begin
+//a = 14;
+//b= 3;
+//end
+//henon_map_q31 q1(clk2Mhz, rst_n, start, avg_value, Segment_data,a,b,x_out,y_out,Henon_done);
 
 henon_prng_top #(
     .TOTAL_ITER(8)
@@ -166,10 +173,9 @@ always @(posedge sysclk or posedge rst_n) begin
             
             TX_START: begin
                 case(byte_count)
-                    2'b00: tx_data <= tx_buffer[7:0];
-                    2'b01: tx_data <= tx_buffer[15:8];
-                    2'b10: tx_data <= tx_buffer[23:16];
-                    2'b11: tx_data <= tx_buffer[31:24];
+                    2'b00: tx_data <= tx_buffer[15:8];
+                    2'b01: tx_data <= tx_buffer[23:16];
+                    2'b10: tx_data <= tx_buffer[31:24];
                 endcase
                 tx_start <= 1'b1;
                 tx_state <= TX_WAIT;
