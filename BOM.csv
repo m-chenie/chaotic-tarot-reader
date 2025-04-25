@@ -1,0 +1,12 @@
+Component ,Details 
+Raspberry Pi 4 Model B ,Main processing unit 
+Breadboard ,For prototyping  connections 
+Digilent Cmod A7 ,FPGA development board 
+PCB_M2_Temp_Light_Sensor ,Custom PCB for sensors 
+Switch KCD2 16A 220V ,Power switch 
+R307 Fingerprint Sensor ,Biometric input sensor 
+7 inch HDMI LCD Screen ,Display interface 
+Top_of_the_Box ,3D printed enclosure part 
+Side Cover to Box ,3D printed side panel 
+2nd_Half_of_Box ,Lower main chassis structure 
+Base for Box ,Bottom support structure 
