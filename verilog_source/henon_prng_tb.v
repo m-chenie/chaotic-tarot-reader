@@ -25,22 +25,19 @@ module henon_prng_tb;
     reg clk = 0;
     reg rst;
     reg start;
-    reg [15:0] seed;
+    reg [31:0] seed;
 
-    // We'll declare fingerprint_mean once:
     reg [31:0] fingerprint_mean;
 
-    // Output wires must be declared as wires
     wire [31:0] random_out_x;
     wire [31:0] random_out_y;
     wire done;
 
-    // Instantiate DUT (matching your top module's port names)
     henon_prng_top dut (
         .clk(clk),
         .rst(rst),
         .start(start),
-        .seed_q16(seed),
+        .seed_q31(seed),
         .fingerprint_mean(fingerprint_mean),
         .random_out_x(random_out_x),
         .random_out_y(random_out_y),
@@ -59,7 +56,7 @@ module henon_prng_tb;
         // Reset sequence
         rst = 1;
         start = 0;
-        seed = 16'h0012;
+        seed = 32'h00123456;
         #20;
         rst = 0;
         #10;
