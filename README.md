@@ -24,8 +24,14 @@ The Chaotic Tarot Reader is an interactive system that combines secure biometric
 
 ---
 
-## Hardware Components
+## 3D Model & Hardware Components
+The enclosure for the Chaotic Tarot Reader, referred to as the DSL Box, was designed in Autodesk Fusion 360 to house the various hardware components securely and efficiently. You can view the 3D model using the link here: https://a360.co/4jVf0f3
+- The model includes compartments for the fingerprint sensor, LCD, and supporting electronics.
+- Use the embedded viewer to rotate, zoom, and inspect the enclosure in 3D.
+- Download is available directly from the link if you wish to modify or print the enclosure.
 
+**These are the hardware components**
+- **DSL Box**: Printed in PLA filament
 - **FPGA**: Digilent Cmod A7 (Artix-7)
 - **Microcontroller**: Arduino Uno
 - **Fingerprint Sensor**: R307
