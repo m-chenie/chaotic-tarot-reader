@@ -8,6 +8,7 @@ A fusion of biometric security, hardware-based randomness, and symbolic visualiz
 
 The Chaotic Tarot Reader is an interactive system that combines secure biometric authentication with chaotic pseudo-random number generation to deliver personalized tarot readings. By leveraging hardware components and cryptographic techniques, the system ensures both security and uniqueness in each interaction.
 
+![Photo of Device](IMG_5707.jpg)
 ---
 
 ## System Architecture
